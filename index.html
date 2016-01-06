@@ -3,12 +3,13 @@
     <head>
         <meta charset="utf-8" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <title>Hacking, Hacker Culture, Git | shine</title>
+        <title>Ataraxia archive | timeline</title>
         
-        <meta name="author" content="shine" />
-        <meta name="description" content="Talk on Hacking, Hacker Culture &amp; Introduction to Git by shine at AngelHack Kochi - Spring 2014 | April 17-18, 2014" />
+        <meta name="author" content="eartesania" />
+        <meta name="description" content="A kind of pedagogic material to play around colaborative archives. Spring 2016 | April 17-18, 2014" />
         
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
+         <link rel="stylesheet" type="text/css" href="css/main.css" />
         
         <link rel="shortcut icon" href="img/favicon.png" />
     </head>
@@ -26,101 +27,56 @@
 
     <div id="impress">
 
-        <div id="title" class="step" data-scale="10">
-            <p id="name">Hacking, Hacker Culture <br> &amp; <br> Introduction to Git</p>
-            <q>shine</q>
-            <p id="title-footnote">Doing good is part our code!</p>
-            <p id="title-footer">#PDFTribute</p>
+        <div id="title" class="step" data-x="0" data-y="0" data-rotate="0" data-scale="1">
+             <form>
+                  <label for="inputGraph">Graphviz Definition</label>
+                  <textarea id="inputGraph" rows="5" style="display: block" onKeyUp="tryDraw();">
+                /* Example */
+                digraph {
+                    /* Note: HTML labels do not work in IE, which lacks support for &lt;foreignObject&gt; tags. */
+                    node [rx=5 ry=5 labelStyle="font: 300 14px 'Helvetica Neue', Helvetica"]
+                    edge [labelStyle="font: 300 14px 'Helvetica Neue', Helvetica;white-space:normal"]
+                    A [labelType="html"
+                       label="A <span style='font-size:32px'>Big</span> <span style='color:red;'>HTML</span> Source!"];
+                    C;
+                    E [label="Bold Red Sink" style="fill: #f77; font-weight: bold"];
+                    A -&gt; B -&gt; C;
+                    B -&gt; D [label="A blue label" labelStyle="fill: #55f; font-weight: bold;"];
+                    D -&gt; E [label="A thick red edge" style="stroke: #f77; stroke-width: 2px;" arrowheadStyle="fill: #f77"];
+                    C -&gt; E;
+                    A -&gt; D [labelType="html" style="white-space:normal" label="A multi-rank <span style='color:blue;'>HTML</span> edge!"];
+                }
+                  </textarea>
+
+                  <a id="graphLink">Link for this graph</a>
+                </form>
+
+                <h2>Graph Visualization</h2>
+
+                <svg width=800 height=600>
+                  <g/>
+                </svg>
+
+            <script src="vendors/d3.js" charset="utf-8"></script>
+            <script src="vendors/dagre-d3.js"></script>
+
+            <script src="http://cpettitt.github.io/project/graphlib-dot/v0.5.2/graphlib-dot.js"></script>
+            <script src="libs/engine.js"></script>
+           
+
         </div>
 
-        <!-- <div id="me" class="step" data-x="3500" data-y="-850">
-            shine
-        </div> -->
 
-        <div id="about" class="step" data-x="3500" data-y="450" data-rotate="90" data-scale="2">
-            <img id="pic" src="img/shine.png" />
-            <p id="colg">Computer Science &amp; Engineering <br> Mar Baselios College of Engineering &amp; Technology</p>
-            &nbsp;
-            <div id="qualifs">
-                <p>- Blogger : </p>
-                <ul>
-                    <li><a href="http://shiningexpressions.wordpress.com/" target="_blank">A Nomad's Travelogue</a></li>
-                    <li><a href="http://blog.mozillakerala.org/" target="_blank">Mozilla Kerala Blog</a></li>
-                    <li><a href="http://startatsv.com/" target="_blank">Start@SV | Startup Village Blog</a></li>
-                </ul>
-                <p>- FOSS Enthusiast</p>
-                <p>- Involved with : </p>
-                <ul>
-                    <li>Mozilla Community | <a href="http://mozillakerala.org/" target="_blank">Mozilla Kerala</a></li>
-                    <li>Free Software Foundation</li>
-                    <li>Ubuntu Community</li>
-                    <li>GNOME Project</li>
-                    <li>GNU Project</li>
-                </ul>
-                <p>- App Developer : </p>
-                <img id="droid" src="img/android.png" />    <img id="FFOS" src="img/FFOS.png" />
-                <!-- <ul>
-                    <li><img src="img/android.png" /></li>
-                    <li><img src="img/FFOS.png" /></li>
-                </ul> -->
-            </div>
+        <div id="about" class="step " data-x="1000" data-y="0" data-z="0" data-rotate="0" data-scale="1">
+          
+            <a class="twitter-timeline"  href="https://twitter.com/f_a_r_o_" data-widget-id="684789828882423808" height="800" data-chrome="transparent">
+                @f_a_r_o_.</a>
+
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          
         </div>
 
-        <div id="hacking" class="step title" data-x="-1850" data-y="-2400" data-scale="2">
-            <h1>Hacking</h1>
-        </div>
-
-        <div id="hacker" class="step" data-x="-4000" data-y="-4250">
-            <img alt="hacker" src="img/hacker1024.jpg" />
-            <p class="overlay">Computer Hacker / Cracker</p>
-        </div>
-
-        <div id="hacking" class="step title" data-x="-1850" data-y="-2400" data-scale="2">
-            <h1>Hacking</h1>
-        </div>
-
-        <div id="maker" class="step ml-150" data-y="-4250">
-            <img alt="making stuff" src="img/making.jpg" />
-        </div>
-
-        <div id="cables" class="step" data-x="1500" data-y="-4250">
-            <img alt="cables" src="img/innoz/820.jpg" />
-        </div>
-
-        <div id="wall-texture" class="step ml-150" data-x="3000" data-y="-4250">
-            <img alt="Wall Texture" src="img/innoz/wall-texture.jpg" />
-        </div>
-
-        <div class="step ml-150" data-x="3130" data-y="-4250" data-scale="1.5">
-            <img alt="Wall Texture" src="img/innoz/wall-texture-zoom.jpg" />
-        </div>
-
-        <div id="toilet-paper-art" class="step" data-x="4500" data-y="-4250">
-            <img alt="Toilet Paper Art" src="img/innoz/ToiletPaperArt.jpg" />
-        </div>
-
-        <div id="lamp" class="step ml-150" data-x="6000" data-y="-4250">
-            <img alt="Lampshade" src="img/innoz/lamp.jpg" />
-        </div>
-
-        <div id="lamp-steps" class="step" data-x="6000" data-y="-3500">
-            <img alt="Lampshade Making Steps" src="img/innoz/lamp-steps.jpg" />
-        </div>
-
-        <div id="vhs" class="step" data-x="7500" data-y="-4250">
-            <img alt="VHS &amp; Picture Frames" src="img/innoz/vhsframe2.jpg" />
-            <img alt="VHS Frame" src="img/innoz/vhsframe.jpg" />
-        </div>
-
-        <div id="secretvhs" class="step ml-150" data-x="7500" data-y="-3500">
-            <img alt="Secret Storage inside VHS box" src="img/innoz/secretvhs.jpg" />
-        </div>
-
-        <div id="hack-cultr" class="step title" data-x="1000" data-y="-2400" data-scale="4">
-            <h1>Hacker Culture</h1>
-        </div>
-
-        <div id="overview" class="step" data-y="-1000" data-scale="10">    </div>
+        <div id="overview" class="step" data-x="0" data-z="0" data-scale="1">    </div>
 
     </div>
 
