@@ -1,0 +1,8 @@
+[submodule "plugin_timeline"]
+	path = plugin_timeline
+	url = https://github.com/aleph1888/ataraxia_archive.git
+	branch = plugin_timeline
+[submodule "archive_music"]
+	path = archive_music
+	url = https://github.com/aleph1888/ataraxia_archive.git
+	branch = archive_music
