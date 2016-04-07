@@ -7,7 +7,7 @@ The idea here is to build some **kind of social network** focused on generate ov
 
 We are planning to start!
 
-January 2016!
+April 2016!
 
 See landing page for [Ataraxia Archive](http://aleph1888.github.io/ataraxia_archive).
 
